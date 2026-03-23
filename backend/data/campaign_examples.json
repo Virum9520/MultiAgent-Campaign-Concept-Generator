@@ -1,0 +1,152 @@
+[
+  {
+    "id": "camp_001",
+    "brand": "Nike",
+    "industry": "sportswear",
+    "campaign_name": "You Can't Stop Us",
+    "summary": "Split-screen video campaign showing diverse athletes performing mirrored movements, emphasizing unity and resilience. Used UGC and professional footage blended together. Drove massive social engagement with #YouCantStopUs hashtag across Instagram and Twitter.",
+    "channels": ["TV", "YouTube", "Instagram", "Twitter"],
+    "audience": "18-35 active lifestyle",
+    "outcomes": "2B impressions, 30% engagement lift"
+  },
+  {
+    "id": "camp_002",
+    "brand": "Apple",
+    "industry": "technology",
+    "campaign_name": "Shot on iPhone",
+    "summary": "User-generated content campaign showcasing photos and videos taken by real iPhone users. Billboards, social media, and TV spots featured stunning amateur photography. Created an ongoing brand movement rather than a one-time campaign.",
+    "channels": ["OOH", "Instagram", "YouTube", "TV"],
+    "audience": "25-55 creative professionals and enthusiasts",
+    "outcomes": "6.5B media impressions, highest brand favorability scores"
+  },
+  {
+    "id": "camp_003",
+    "brand": "Spotify",
+    "industry": "music streaming",
+    "campaign_name": "Wrapped",
+    "summary": "Annual personalized year-in-review campaign turning user listening data into shareable stories. Each user gets unique stats about their music habits presented in visually engaging formats designed for social sharing.",
+    "channels": ["In-app", "Instagram Stories", "Twitter", "TikTok"],
+    "audience": "18-35 music enthusiasts",
+    "outcomes": "60M shares, #1 trending worldwide, 30% DAU spike"
+  },
+  {
+    "id": "camp_004",
+    "brand": "Dove",
+    "industry": "personal care",
+    "campaign_name": "Real Beauty",
+    "summary": "Long-running campaign challenging beauty standards by featuring real women of all shapes, sizes, and backgrounds. Forensic sketch artist video went viral showing women describe themselves vs how strangers see them.",
+    "channels": ["TV", "YouTube", "Print", "Social Media"],
+    "audience": "Women 25-54",
+    "outcomes": "Most viral ad of all time at launch, $1.5B sales increase"
+  },
+  {
+    "id": "camp_005",
+    "brand": "Old Spice",
+    "industry": "personal care",
+    "campaign_name": "The Man Your Man Could Smell Like",
+    "summary": "Humorous campaign featuring Isaiah Mustafa in absurd scenarios, speaking directly to female viewers. Followed up with personalized video responses to social media comments in real-time, creating unprecedented brand-consumer interaction.",
+    "channels": ["TV", "YouTube", "Twitter", "Facebook"],
+    "audience": "Women 18-35 (purchasing for men)",
+    "outcomes": "105% sales increase, 11M YouTube views in 36 hours"
+  },
+  {
+    "id": "camp_006",
+    "brand": "Airbnb",
+    "industry": "travel",
+    "campaign_name": "Made Possible by Hosts",
+    "summary": "Campaign shifting focus from properties to the human hosts behind them. Used real guest photos and stories showing authentic travel moments that only local hosts could create. Emphasized belonging over accommodation.",
+    "channels": ["TV", "Instagram", "YouTube", "OOH"],
+    "audience": "25-45 experience-seeking travelers",
+    "outcomes": "14% increase in bookings, strongest brand sentiment in 3 years"
+  },
+  {
+    "id": "camp_007",
+    "brand": "Patagonia",
+    "industry": "outdoor apparel",
+    "campaign_name": "Don't Buy This Jacket",
+    "summary": "Counter-intuitive Black Friday ad urging consumers not to buy unless necessary. Highlighted environmental cost of consumption. Reinforced brand values of sustainability and responsibility, paradoxically driving sales and loyalty.",
+    "channels": ["Print", "Email", "Website", "Social Media"],
+    "audience": "30-55 environmentally conscious outdoor enthusiasts",
+    "outcomes": "30% revenue increase, massive earned media coverage"
+  },
+  {
+    "id": "camp_008",
+    "brand": "Coca-Cola",
+    "industry": "beverages",
+    "campaign_name": "Share a Coke",
+    "summary": "Replaced the Coca-Cola logo on bottles with popular first names, encouraging people to find and share bottles with friends' names. Created a personal connection to a mass-market product and drove social sharing.",
+    "channels": ["Packaging", "Social Media", "OOH", "TV"],
+    "audience": "13-35 general consumer",
+    "outcomes": "2% sales increase after decade of decline, 500K social posts"
+  },
+  {
+    "id": "camp_009",
+    "brand": "Tesla",
+    "industry": "automotive",
+    "campaign_name": "Cybertruck Reveal",
+    "summary": "Highly unconventional product reveal with polarizing angular design. The 'failed' window test became the most talked-about moment. Zero traditional advertising spend — pure earned media through controversy and innovation narrative.",
+    "channels": ["Live Event", "Twitter", "YouTube", "Reddit"],
+    "audience": "25-50 tech-forward early adopters",
+    "outcomes": "250K pre-orders in first week, $0 ad spend"
+  },
+  {
+    "id": "camp_010",
+    "brand": "Glossier",
+    "industry": "beauty",
+    "campaign_name": "Skin First, Makeup Second",
+    "summary": "Community-driven beauty brand campaign leveraging micro-influencers and real customer content. Built a brand ambassador program where everyday customers became the marketing engine. Minimal professional production, maximum authenticity.",
+    "channels": ["Instagram", "TikTok", "Email", "Community Platform"],
+    "audience": "18-30 beauty-conscious digital natives",
+    "outcomes": "70% of growth from peer referrals, 2.5M Instagram followers"
+  },
+  {
+    "id": "camp_011",
+    "brand": "McDonald's",
+    "industry": "food & beverage",
+    "campaign_name": "Famous Orders",
+    "summary": "Celebrity meal collaborations (Travis Scott, BTS, Saweetie) turning standard menu items into cultural moments. Each collab included custom packaging, merch drops, and social media activations that drove unprecedented foot traffic.",
+    "channels": ["TV", "TikTok", "Instagram", "In-Store", "Merch"],
+    "audience": "16-30 culture-driven consumers",
+    "outcomes": "Travis Scott meal caused supply shortages, BTS meal launched in 50 countries"
+  },
+  {
+    "id": "camp_012",
+    "brand": "IKEA",
+    "industry": "home furnishing",
+    "campaign_name": "The Wonderful Everyday",
+    "summary": "Campaign repositioning IKEA from budget furniture to enabler of better everyday living. Short films, social content, and in-store experiences all focused on small moments at home that bring joy. Made functional furniture aspirational.",
+    "channels": ["TV", "YouTube", "Pinterest", "In-Store Experience"],
+    "audience": "25-45 homemakers and young families",
+    "outcomes": "8% YoY sales growth, 45% increase in brand consideration"
+  },
+  {
+    "id": "camp_013",
+    "brand": "Duolingo",
+    "industry": "education technology",
+    "campaign_name": "Unhinged TikTok Strategy",
+    "summary": "Brand mascot Duo the owl became a chaotic, threatening, and hilarious TikTok personality. Leaned into meme culture, responded to trends in real-time, and created a parasocial relationship between users and the mascot. Zero traditional advertising feel.",
+    "channels": ["TikTok", "Twitter", "Instagram Reels"],
+    "audience": "16-30 digital natives, Gen Z",
+    "outcomes": "6.5M TikTok followers, 40% increase in app downloads"
+  },
+  {
+    "id": "camp_014",
+    "brand": "Oatly",
+    "industry": "food & beverage",
+    "campaign_name": "Wow No Cow",
+    "summary": "Deliberately weird and self-aware campaign that broke every convention of food advertising. CEO singing badly, calling out their own critics, and using packaging as a media channel. Anti-advertising that felt genuine in an era of polished content.",
+    "channels": ["OOH", "Packaging", "YouTube", "Social Media"],
+    "audience": "22-40 health-conscious, sustainability-minded consumers",
+    "outcomes": "Triple-digit revenue growth in US market"
+  },
+  {
+    "id": "camp_015",
+    "brand": "Lego",
+    "industry": "toys & entertainment",
+    "campaign_name": "Rebuild the World",
+    "summary": "Campaign encouraging creative play and imagination through fantastical scenarios where Lego creations come to life. Mixed real Lego builds with CGI in a vibrant, optimistic world. Extended into user challenges and building events.",
+    "channels": ["TV", "YouTube", "Instagram", "In-Store Events", "Gaming"],
+    "audience": "Children 6-12 and adult fans (AFOL) 25-45",
+    "outcomes": "13% revenue growth, strongest brand health metrics in company history"
+  }
+]
