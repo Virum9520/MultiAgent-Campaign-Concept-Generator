@@ -1,10 +1,10 @@
 import type { ProgressEvent } from "../types/campaign";
 
 const STEPS = [
-  { id: "trend_agent", label: "Trend Research", icon: "1" },
-  { id: "strategy_agent", label: "Strategy", icon: "2" },
-  { id: "creative_agent", label: "Creative Concepts", icon: "3" },
-  { id: "quality_gate", label: "Quality Check", icon: "4" },
+  { id: "trend_agent", label: "Trend Agent", icon: "01" },
+  { id: "strategy_agent", label: "Strategy Agent", icon: "02" },
+  { id: "creative_agent", label: "Creative Agent", icon: "03" },
+  { id: "quality_gate", label: "Quality Gate", icon: "04" },
 ];
 
 interface Props {
@@ -20,10 +20,16 @@ export default function PipelineProgress({ events }: Props) {
   };
 
   return (
-    <div className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
-      <h2 className="text-lg font-semibold mb-6 text-center">
-        Agent Pipeline
-      </h2>
+    <div className="rounded-xl border border-cyber-500/20 bg-surface-900/60 p-6 backdrop-blur-sm glow-cyan">
+      <div className="flex items-center gap-2 mb-6 justify-center">
+        <span className="relative flex h-2 w-2">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyber-400 opacity-75"></span>
+          <span className="relative inline-flex h-2 w-2 rounded-full bg-cyber-500"></span>
+        </span>
+        <h2 className="text-xs font-mono font-semibold text-cyber-400 uppercase tracking-[0.2em]">
+          Agent Pipeline Active
+        </h2>
+      </div>
       <div className="flex items-center justify-between gap-2">
         {STEPS.map((step, idx) => {
           const status = getStepStatus(step.id);
@@ -31,12 +37,12 @@ export default function PipelineProgress({ events }: Props) {
             <div key={step.id} className="flex items-center gap-2 flex-1">
               <div className="flex flex-col items-center gap-2 flex-1">
                 <div
-                  className={`flex h-10 w-10 items-center justify-center rounded-full text-sm font-bold transition-all duration-500 ${
+                  className={`relative flex h-11 w-11 items-center justify-center rounded-lg font-mono text-xs font-bold transition-all duration-500 ${
                     status === "completed"
-                      ? "bg-emerald-500 text-white shadow-lg shadow-emerald-500/30"
+                      ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/40"
                       : status === "active"
-                        ? "bg-violet-500 text-white shadow-lg shadow-violet-500/30 animate-pulse"
-                        : "border border-white/20 bg-white/5 text-slate-500"
+                        ? "bg-cyber-500/20 text-cyber-300 border border-cyber-500/50 ping-slow"
+                        : "border border-surface-700 bg-surface-800/50 text-surface-500"
                   }`}
                 >
                   {status === "completed" ? (
@@ -58,12 +64,12 @@ export default function PipelineProgress({ events }: Props) {
                   )}
                 </div>
                 <span
-                  className={`text-xs font-medium text-center ${
+                  className={`text-[10px] font-mono font-medium text-center uppercase tracking-wider ${
                     status === "completed"
                       ? "text-emerald-400"
                       : status === "active"
-                        ? "text-violet-400"
-                        : "text-slate-500"
+                        ? "text-cyber-400"
+                        : "text-surface-500"
                   }`}
                 >
                   {step.label}
@@ -71,10 +77,10 @@ export default function PipelineProgress({ events }: Props) {
               </div>
               {idx < STEPS.length - 1 && (
                 <div
-                  className={`h-0.5 flex-1 -mt-6 transition-all duration-500 ${
+                  className={`h-px flex-1 -mt-6 transition-all duration-500 ${
                     status === "completed"
-                      ? "bg-emerald-500/50"
-                      : "bg-white/10"
+                      ? "bg-emerald-500/40"
+                      : "bg-surface-700"
                   }`}
                 />
               )}

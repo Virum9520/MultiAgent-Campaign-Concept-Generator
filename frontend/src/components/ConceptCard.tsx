@@ -9,59 +9,63 @@ interface Props {
 
 export default function ConceptCard({ concept, scores, index }: Props) {
   return (
-    <div className="rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden transition-all hover:border-white/20">
+    <div className="rounded-xl border border-surface-700 bg-surface-900/60 backdrop-blur-sm overflow-hidden transition-all hover:border-cyber-500/30 hover:glow-cyan">
       {/* Header */}
-      <div className="bg-gradient-to-r from-violet-600/20 to-indigo-600/20 px-6 py-4 border-b border-white/10">
+      <div className="px-6 py-4 border-b border-surface-700 bg-surface-800/30">
         <div className="flex items-center justify-between">
-          <span className="text-xs font-medium text-violet-400 uppercase tracking-wider">
-            Concept {index + 1}
+          <span className="text-[10px] font-mono font-bold text-cyber-400 uppercase tracking-[0.2em]">
+            Concept {String(index + 1).padStart(2, "0")}
           </span>
           {concept.estimated_reach_tier && (
-            <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-slate-300 capitalize">
+            <span className="rounded-md bg-surface-800 border border-surface-600 px-2.5 py-1 text-[10px] font-mono font-medium text-surface-300 capitalize tracking-wider">
               {concept.estimated_reach_tier} Reach
             </span>
           )}
         </div>
-        <h3 className="text-xl font-bold mt-1">{concept.concept_name}</h3>
+        <h3 className="text-lg font-bold mt-1 text-white">
+          {concept.concept_name}
+        </h3>
       </div>
 
       <div className="p-6 space-y-5">
         {/* Headline */}
         <div>
-          <p className="text-2xl font-bold text-white leading-tight">
+          <p className="text-xl font-bold text-white leading-tight">
             "{concept.headline}"
           </p>
-          <p className="text-slate-400 mt-1">{concept.subheadline}</p>
+          <p className="text-surface-400 mt-1 text-sm">
+            {concept.subheadline}
+          </p>
         </div>
 
         {/* Visual */}
-        <div className="rounded-lg bg-white/5 border border-white/10 p-4">
-          <p className="text-xs font-medium text-slate-400 uppercase tracking-wider mb-2">
+        <div className="rounded-lg bg-neon-500/5 border border-neon-500/15 p-4">
+          <p className="text-[10px] font-mono font-semibold text-neon-400 uppercase tracking-[0.15em] mb-2">
             Visual Direction
           </p>
-          <p className="text-sm text-slate-300 italic leading-relaxed">
+          <p className="text-sm text-surface-300 italic leading-relaxed">
             {concept.visual_description}
           </p>
         </div>
 
         {/* Key Message */}
         <div>
-          <p className="text-xs font-medium text-slate-400 uppercase tracking-wider mb-1">
+          <p className="text-[10px] font-mono font-semibold text-surface-400 uppercase tracking-[0.15em] mb-1">
             Key Message
           </p>
-          <p className="text-slate-200">{concept.key_message}</p>
+          <p className="text-surface-300">{concept.key_message}</p>
         </div>
 
         {/* Channels */}
         <div>
-          <p className="text-xs font-medium text-slate-400 uppercase tracking-wider mb-2">
+          <p className="text-[10px] font-mono font-semibold text-surface-400 uppercase tracking-[0.15em] mb-2">
             Channels
           </p>
           <div className="flex flex-wrap gap-1.5">
             {concept.channels.map((ch) => (
               <span
                 key={ch}
-                className="rounded-md bg-indigo-500/20 border border-indigo-500/30 px-2.5 py-1 text-xs font-medium text-indigo-300"
+                className="rounded-md bg-cyber-500/10 border border-cyber-500/20 px-2.5 py-1 text-xs font-medium text-cyber-300"
               >
                 {ch}
               </span>
@@ -71,14 +75,14 @@ export default function ConceptCard({ concept, scores, index }: Props) {
 
         {/* Content Formats */}
         <div>
-          <p className="text-xs font-medium text-slate-400 uppercase tracking-wider mb-2">
+          <p className="text-[10px] font-mono font-semibold text-surface-400 uppercase tracking-[0.15em] mb-2">
             Content Formats
           </p>
           <div className="flex flex-wrap gap-1.5">
             {concept.content_formats.map((fmt) => (
               <span
                 key={fmt}
-                className="rounded-md bg-white/5 border border-white/10 px-2.5 py-1 text-xs text-slate-400"
+                className="rounded-md bg-surface-800/80 border border-surface-700 px-2.5 py-1 text-xs text-surface-400"
               >
                 {fmt}
               </span>
@@ -87,18 +91,18 @@ export default function ConceptCard({ concept, scores, index }: Props) {
         </div>
 
         {/* CTA */}
-        <div className="rounded-lg bg-gradient-to-r from-violet-600/10 to-indigo-600/10 border border-violet-500/20 p-4 text-center">
-          <p className="text-xs font-medium text-slate-400 uppercase tracking-wider mb-1">
+        <div className="rounded-lg bg-cyber-500/5 border border-cyber-500/20 p-4 text-center">
+          <p className="text-[10px] font-mono font-semibold text-surface-400 uppercase tracking-[0.15em] mb-1">
             Call to Action
           </p>
-          <p className="text-lg font-semibold text-violet-300">
+          <p className="text-lg font-semibold text-cyber-300">
             {concept.call_to_action}
           </p>
         </div>
 
         {/* Quality Scores */}
         {scores && (
-          <div className="border-t border-white/10 pt-4">
+          <div className="border-t border-surface-700 pt-4">
             <div className="flex flex-wrap gap-2">
               <QualityBadge label="Relevance" score={scores.relevance} />
               <QualityBadge label="Feasibility" score={scores.feasibility} />
@@ -107,7 +111,9 @@ export default function ConceptCard({ concept, scores, index }: Props) {
               <QualityBadge label="Overall" score={scores.overall} />
             </div>
             {scores.feedback && (
-              <p className="mt-2 text-xs text-slate-400">{scores.feedback}</p>
+              <p className="mt-2 text-xs text-surface-400">
+                {scores.feedback}
+              </p>
             )}
           </div>
         )}

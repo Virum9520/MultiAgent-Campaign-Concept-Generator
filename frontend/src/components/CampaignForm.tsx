@@ -66,11 +66,18 @@ export default function CampaignForm({ onSubmit, isLoading }: Props) {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
-        <h2 className="text-xl font-semibold mb-4">Brand & Product</h2>
+      {/* Brand & Product */}
+      <div className="rounded-xl border border-surface-700 bg-surface-900/60 p-6 backdrop-blur-sm">
+        <div className="flex items-center gap-2 mb-5">
+          <div className="h-1 w-1 rounded-full bg-cyber-400"></div>
+          <h2 className="text-sm font-semibold text-white uppercase tracking-wider">
+            Brand & Product
+          </h2>
+          <div className="flex-1 h-px bg-gradient-to-r from-surface-700 to-transparent"></div>
+        </div>
         <div className="grid gap-4 md:grid-cols-2">
           <div>
-            <label className="block text-sm font-medium text-slate-300 mb-1.5">
+            <label className="block text-xs font-mono font-medium text-surface-400 mb-1.5 uppercase tracking-wider">
               Brand Name *
             </label>
             <input
@@ -80,11 +87,11 @@ export default function CampaignForm({ onSubmit, isLoading }: Props) {
                 setForm((f) => ({ ...f, brand_name: e.target.value }))
               }
               placeholder="e.g., Nike, Spotify"
-              className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-white placeholder-slate-500 focus:border-violet-500 focus:outline-none focus:ring-1 focus:ring-violet-500"
+              className="w-full rounded-lg border border-surface-700 bg-surface-800/80 px-4 py-2.5 text-white placeholder-surface-500 focus:border-cyber-500/50 focus:outline-none focus:ring-1 focus:ring-cyber-500/30 transition-colors"
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-slate-300 mb-1.5">
+            <label className="block text-xs font-mono font-medium text-surface-400 mb-1.5 uppercase tracking-wider">
               Industry *
             </label>
             <select
@@ -92,13 +99,13 @@ export default function CampaignForm({ onSubmit, isLoading }: Props) {
               onChange={(e) =>
                 setForm((f) => ({ ...f, industry: e.target.value }))
               }
-              className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-white focus:border-violet-500 focus:outline-none focus:ring-1 focus:ring-violet-500"
+              className="w-full rounded-lg border border-surface-700 bg-surface-800/80 px-4 py-2.5 text-white focus:border-cyber-500/50 focus:outline-none focus:ring-1 focus:ring-cyber-500/30 transition-colors"
             >
-              <option value="" className="bg-slate-900">
+              <option value="" className="bg-surface-900">
                 Select industry...
               </option>
               {INDUSTRY_OPTIONS.map((ind) => (
-                <option key={ind} value={ind.toLowerCase()} className="bg-slate-900">
+                <option key={ind} value={ind.toLowerCase()} className="bg-surface-900">
                   {ind}
                 </option>
               ))}
@@ -106,7 +113,7 @@ export default function CampaignForm({ onSubmit, isLoading }: Props) {
           </div>
         </div>
         <div className="mt-4">
-          <label className="block text-sm font-medium text-slate-300 mb-1.5">
+          <label className="block text-xs font-mono font-medium text-surface-400 mb-1.5 uppercase tracking-wider">
             Product Description *
           </label>
           <textarea
@@ -116,11 +123,11 @@ export default function CampaignForm({ onSubmit, isLoading }: Props) {
             }
             rows={3}
             placeholder="Describe the product or service you want to promote..."
-            className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-white placeholder-slate-500 focus:border-violet-500 focus:outline-none focus:ring-1 focus:ring-violet-500 resize-none"
+            className="w-full rounded-lg border border-surface-700 bg-surface-800/80 px-4 py-2.5 text-white placeholder-surface-500 focus:border-cyber-500/50 focus:outline-none focus:ring-1 focus:ring-cyber-500/30 transition-colors resize-none"
           />
         </div>
         <div className="mt-4">
-          <label className="block text-sm font-medium text-slate-300 mb-1.5">
+          <label className="block text-xs font-mono font-medium text-surface-400 mb-1.5 uppercase tracking-wider">
             Target Audience *
           </label>
           <input
@@ -130,23 +137,30 @@ export default function CampaignForm({ onSubmit, isLoading }: Props) {
               setForm((f) => ({ ...f, target_audience: e.target.value }))
             }
             placeholder="e.g., Gen Z fitness enthusiasts, 25-35 working professionals"
-            className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-white placeholder-slate-500 focus:border-violet-500 focus:outline-none focus:ring-1 focus:ring-violet-500"
+            className="w-full rounded-lg border border-surface-700 bg-surface-800/80 px-4 py-2.5 text-white placeholder-surface-500 focus:border-cyber-500/50 focus:outline-none focus:ring-1 focus:ring-cyber-500/30 transition-colors"
           />
         </div>
       </div>
 
-      <div className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
-        <h2 className="text-xl font-semibold mb-4">Campaign Goals *</h2>
+      {/* Campaign Goals */}
+      <div className="rounded-xl border border-surface-700 bg-surface-900/60 p-6 backdrop-blur-sm">
+        <div className="flex items-center gap-2 mb-5">
+          <div className="h-1 w-1 rounded-full bg-neon-500"></div>
+          <h2 className="text-sm font-semibold text-white uppercase tracking-wider">
+            Campaign Goals *
+          </h2>
+          <div className="flex-1 h-px bg-gradient-to-r from-surface-700 to-transparent"></div>
+        </div>
         <div className="flex flex-wrap gap-2">
           {GOAL_OPTIONS.map((goal) => (
             <button
               key={goal}
               type="button"
               onClick={() => toggleGoal(goal.toLowerCase())}
-              className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${
+              className={`rounded-lg px-4 py-2 text-sm font-medium transition-all ${
                 form.campaign_goals.includes(goal.toLowerCase())
-                  ? "bg-violet-600 text-white shadow-lg shadow-violet-500/25"
-                  : "border border-white/10 bg-white/5 text-slate-300 hover:bg-white/10"
+                  ? "bg-cyber-500/20 text-cyber-300 border border-cyber-500/40 glow-cyan"
+                  : "border border-surface-700 bg-surface-800/50 text-surface-400 hover:border-surface-500 hover:text-surface-300"
               }`}
             >
               {goal}
@@ -155,8 +169,15 @@ export default function CampaignForm({ onSubmit, isLoading }: Props) {
         </div>
       </div>
 
-      <div className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
-        <h2 className="text-xl font-semibold mb-4">Budget Tier</h2>
+      {/* Budget Tier */}
+      <div className="rounded-xl border border-surface-700 bg-surface-900/60 p-6 backdrop-blur-sm">
+        <div className="flex items-center gap-2 mb-5">
+          <div className="h-1 w-1 rounded-full bg-cyber-400"></div>
+          <h2 className="text-sm font-semibold text-white uppercase tracking-wider">
+            Budget Tier
+          </h2>
+          <div className="flex-1 h-px bg-gradient-to-r from-surface-700 to-transparent"></div>
+        </div>
         <div className="flex gap-3">
           {(["low", "medium", "high"] as const).map((tier) => (
             <button
@@ -165,8 +186,8 @@ export default function CampaignForm({ onSubmit, isLoading }: Props) {
               onClick={() => setForm((f) => ({ ...f, budget_tier: tier }))}
               className={`flex-1 rounded-lg py-3 text-sm font-medium capitalize transition-all ${
                 form.budget_tier === tier
-                  ? "bg-violet-600 text-white shadow-lg shadow-violet-500/25"
-                  : "border border-white/10 bg-white/5 text-slate-300 hover:bg-white/10"
+                  ? "bg-neon-500/20 text-neon-400 border border-neon-500/40 glow-neon"
+                  : "border border-surface-700 bg-surface-800/50 text-surface-400 hover:border-surface-500 hover:text-surface-300"
               }`}
             >
               {tier}
@@ -175,8 +196,15 @@ export default function CampaignForm({ onSubmit, isLoading }: Props) {
         </div>
       </div>
 
-      <div className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
-        <h2 className="text-xl font-semibold mb-4">Additional Context</h2>
+      {/* Additional Context */}
+      <div className="rounded-xl border border-surface-700 bg-surface-900/60 p-6 backdrop-blur-sm">
+        <div className="flex items-center gap-2 mb-5">
+          <div className="h-1 w-1 rounded-full bg-surface-500"></div>
+          <h2 className="text-sm font-semibold text-white uppercase tracking-wider">
+            Additional Context
+          </h2>
+          <div className="flex-1 h-px bg-gradient-to-r from-surface-700 to-transparent"></div>
+        </div>
         <textarea
           value={form.additional_context}
           onChange={(e) =>
@@ -184,16 +212,23 @@ export default function CampaignForm({ onSubmit, isLoading }: Props) {
           }
           rows={2}
           placeholder="Any additional context, constraints, or preferences (optional)"
-          className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-white placeholder-slate-500 focus:border-violet-500 focus:outline-none focus:ring-1 focus:ring-violet-500 resize-none"
+          className="w-full rounded-lg border border-surface-700 bg-surface-800/80 px-4 py-2.5 text-white placeholder-surface-500 focus:border-cyber-500/50 focus:outline-none focus:ring-1 focus:ring-cyber-500/30 transition-colors resize-none"
         />
       </div>
 
+      {/* Submit */}
       <button
         type="submit"
         disabled={!isValid || isLoading}
-        className="w-full rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 py-4 text-lg font-semibold text-white shadow-lg shadow-violet-500/25 transition-all hover:from-violet-500 hover:to-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed"
+        className="group relative w-full rounded-xl border border-cyber-500/30 bg-cyber-500/10 py-4 text-base font-semibold text-cyber-300 transition-all hover:bg-cyber-500/20 hover:border-cyber-500/50 hover:text-cyber-200 glow-cyan disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-cyber-500/10 disabled:hover:border-cyber-500/30"
       >
-        {isLoading ? "Generating..." : "Generate Campaign Concepts"}
+        <span className="relative z-10 font-mono uppercase tracking-wider text-sm">
+          {isLoading ? (
+            <span className="cursor-blink">Generating</span>
+          ) : (
+            "Launch Agent Pipeline"
+          )}
+        </span>
       </button>
     </form>
   );
